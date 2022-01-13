@@ -4,14 +4,17 @@ import { galleryItems } from './gallery-items.js';
 const galleryEl = document.querySelector('.gallery');
 
 const createGalleryItemEl = ({ preview, original, description } = {}) => {
-    return `<a class="gallery__link" href=${original}>
+    return `
+    <div class="gallery__item">
+    <a class="gallery__link" href=${original}>
     <img
       class="gallery__image"
       src=${preview}
       data-source=${original}
       alt=${description}
     />
-  </a>`
+  </a>
+</div>`
 };
 
 const getGalleryItemEl = galleryItems.map(el => {
