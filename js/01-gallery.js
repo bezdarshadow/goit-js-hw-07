@@ -5,7 +5,7 @@ const galleryEl = document.querySelector('.gallery');
 
 const createGalleryItemEl = ({ preview, original, description } = {}) => {
     return `
-    <div class="gallery__item">
+    <li class="gallery__item">
     <a class="gallery__link" href=${original}>
     <img
       class="gallery__image"
@@ -14,7 +14,7 @@ const createGalleryItemEl = ({ preview, original, description } = {}) => {
       alt=${description}
     />
   </a>
-</div>`
+</li>`
 };
 
 const getGalleryItemEl = galleryItems.map(el => {
